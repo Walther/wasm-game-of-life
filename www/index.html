@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Rust + wasm + Game of Life = ❤️</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+      .line {
+        flex: 1;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Rust + wasm + Game of Life = ❤️</p>
+    <div class="line">
+      <button id="play-pause"></button> <button id="reset"></button>
+      <button id="random"></button>
+    </div>
+    <canvas id="game-of-life-canvas"></canvas>
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>
