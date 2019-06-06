@@ -2,7 +2,7 @@ import { Universe, Cell } from "wasm-game-of-life";
 // Import the WebAssembly memory at the top of the file.
 import { memory } from "wasm-game-of-life/wasm_game_of_life_bg";
 
-const CELL_SIZE = 5; // px
+const CELL_SIZE = 2; // px
 const GRID_COLOR = "#CCCCCC";
 const DEAD_COLOR = "#FFFFFF";
 const ALIVE_COLOR = "#000000";
@@ -162,7 +162,7 @@ const drawCells = () => {
   ctx.stroke();
 };
 
-const fps = new class {
+const fps = new (class {
   constructor() {
     this.fps = document.getElementById("fps");
     this.frames = [];
@@ -203,7 +203,7 @@ const fps = new class {
     max of last 100 = ${Math.round(max)}
     `.trim();
   }
-}();
+})();
 
 const reset = () => {
   pause();
